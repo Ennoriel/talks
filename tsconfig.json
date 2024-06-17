@@ -12,21 +12,9 @@
 		"moduleResolution": "bundler",
 		"types": ["node"],
 
-		// this is not necessary anymore https://github.com/sveltejs/svelte-preprocess/issues/318
-		// "importsNotUsedAsValues": "error",
-
 		// https://www.typescriptlang.org/tsconfig#isolatedModules
 		// the isolatedModules flag tells TypeScript to warn you if you write certain code that can’t be correctly interpreted by a single-file transpilation process.
 		"isolatedModules": true,
-
-		// https://www.typescriptlang.org/tsconfig#baseUrl
-		// This feature was designed for use in conjunction with AMD module loaders in the browser, and is not recommended in any other context.
-		// With "baseUrl": "./", TypeScript will look for files starting at the same folder as the tsconfig.json:
-		// "baseUrl": "./"
-
-		// https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html#faster-subsequent-builds-with-the---incremental-flag
-		// tells TypeScript to save information about the project graph from the last compilation. The next time TypeScript is invoked with incremental, it will use that information to detect the least costly way to type-check and emit changes to your project.
-		// "incremental": true,
 
 		// https://www.typescriptlang.org/tsconfig#downlevelIteration
 		// This flag is to enable support for a more accurate implementation of how modern JavaScript iterates through new concepts in older JavaScript runtimes.
