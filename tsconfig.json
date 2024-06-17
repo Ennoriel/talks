@@ -9,10 +9,62 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"moduleResolution": "bundler"
+		"moduleResolution": "bundler",
+		"types": ["node"],
+
+		// this is not necessary anymore https://github.com/sveltejs/svelte-preprocess/issues/318
+		// "importsNotUsedAsValues": "error",
+
+		// https://www.typescriptlang.org/tsconfig#isolatedModules
+		// the isolatedModules flag tells TypeScript to warn you if you write certain code that can’t be correctly interpreted by a single-file transpilation process.
+		"isolatedModules": true,
+
+		// https://www.typescriptlang.org/tsconfig#baseUrl
+		// This feature was designed for use in conjunction with AMD module loaders in the browser, and is not recommended in any other context.
+		// With "baseUrl": "./", TypeScript will look for files starting at the same folder as the tsconfig.json:
+		// "baseUrl": "./"
+
+		// https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html#faster-subsequent-builds-with-the---incremental-flag
+		// tells TypeScript to save information about the project graph from the last compilation. The next time TypeScript is invoked with incremental, it will use that information to detect the least costly way to type-check and emit changes to your project.
+		// "incremental": true,
+
+		// https://www.typescriptlang.org/tsconfig#downlevelIteration
+		// This flag is to enable support for a more accurate implementation of how modern JavaScript iterates through new concepts in older JavaScript runtimes.
+		"downlevelIteration": true,
+
+		// https://www.typescriptlang.org/tsconfig#importHelpers
+		// If the importHelpers flag is on, these helper functions are instead imported from the tslib module.
+		"importHelpers": true,
+
+		// https://www.typescriptlang.org/tsconfig#allowUnreachableCode
+		// raises compiler errors about unreachable code
+		"allowUnreachableCode": false,
+
+		// https://www.typescriptlang.org/tsconfig#noImplicitReturns
+		// When enabled, TypeScript will check all code paths in a function to ensure they return a value.
+		"noImplicitReturns": true,
+
+		// https://www.typescriptlang.org/tsconfig#noUncheckedIndexedAccess
+		// accessing a property defined with an indexed signature will add undefined to its type
+		"noUncheckedIndexedAccess": true,
+
+		// https://www.typescriptlang.org/tsconfig#noUnusedLocals
+		// Report errors on unused local variables.
+		"noUnusedLocals": true,
+
+		// https://www.typescriptlang.org/tsconfig#noUnusedParameters
+		// Report errors on unused parameters in functions
+		"noUnusedParameters": true,
+
+		// https://www.typescriptlang.org/tsconfig#noImplicitOverride
+		// Using noImplicitOverride you can ensure that the sub-classes never go out of sync, by ensuring that functions which override include the keyword override.
+		"noImplicitOverride": true,
+
+		// https://www.typescriptlang.org/tsconfig#strictFunctionTypes
+		// When enabled, this flag causes functions parameters to be checked more correctly.
+		"strictFunctionTypes": true,
+
+		// necessary for remult
+		"experimentalDecorators": true
 	}
-	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
-	//
-	// If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes
-	// from the referenced tsconfig.json - TypeScript does not merge them in
 }
