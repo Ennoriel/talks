@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { RevealJsContext, SvelteRevealHMR, simple, notes } from 'svelte-reveal.js';
+	import { RevealJsContext, SvelteRevealHMR, white, notes } from 'svelte-reveal.js';
 	import Slides from './slides';
 </script>
 
@@ -13,7 +13,7 @@
 		width: 1280
 	}}
 	plugins={[notes]}
-	themes={[simple]}
+	themes={[white]}
 >
 	<!-- use this only in dev -->
 	<!-- if you forget it, it's not a big deal though -->

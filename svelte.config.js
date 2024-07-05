@@ -15,7 +15,7 @@ const config = {
 		inspector: {
 			holdMode: true,
 			showToggleButton: 'always',
-			toggleButtonPos: 'bottom-right'
+			toggleButtonPos: 'top-right'
 		}
 	}
 };
